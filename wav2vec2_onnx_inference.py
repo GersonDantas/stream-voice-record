@@ -37,6 +37,6 @@ class Wave2Vec2ONNXInference():
 
 if __name__ == "__main__":
     print("Model test")
-    asr = Wave2Vec2ONNXInference("jonatasgrosman/wav2vec2-large-xlsr-53-german","wav2vec2-large-xlsr-53-german.quant.onnx")
+    asr = Wave2Vec2ONNXInference("jonatasgrosman/wav2vec2-large-xlsr-53-portuguese","wav2vec2-large-xlsr-53-portuguese.quant.onnx")
     text = asr.file_to_text("test.wav")
     print(text)

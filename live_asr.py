@@ -117,7 +117,7 @@ class LiveWav2Vec2():
 if __name__ == "__main__":
     print("Live ASR")
 
-    asr = LiveWav2Vec2("oliverguhr/wav2vec2-large-xlsr-53-german-cv9")
+    asr = LiveWav2Vec2("jonatasgrosman/wav2vec2-large-xlsr-53-portuguese")
 
     asr.start()
 

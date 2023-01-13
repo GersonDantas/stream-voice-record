@@ -10,11 +10,11 @@ if __name__ == "__main__":
     audio_input, samplerate = sf.read("test.wav")
     print("Model test")
 
-    base_model = "oliverguhr/wav2vec2-large-xlsr-53-german-cv9"
+    base_model = "jonatasgrosman/wav2vec2-large-xlsr-53-portuguese"
 
-    asr_onnx_opt = Wave2Vec2ONNXInference(base_model,"wav2vec2-large-xlsr-53-german-cv9-opt.onnx")
-    asr_onnx_quant = Wave2Vec2ONNXInference(base_model,"wav2vec2-large-xlsr-53-german-cv9.quant.onnx")
-    asr_onnx = Wave2Vec2ONNXInference(base_model,"wav2vec2-large-xlsr-53-german-cv9.onnx")
+    asr_onnx_opt = Wave2Vec2ONNXInference(base_model,"wav2vec2-large-xlsr-53-portuguese-opt.onnx")
+    asr_onnx_quant = Wave2Vec2ONNXInference(base_model,"wav2vec2-large-xlsr-53-portuguese.quant.onnx")
+    asr_onnx = Wave2Vec2ONNXInference(base_model,"wav2vec2-large-xlsr-53-portuguese.onnx")
     text = asr_onnx.buffer_to_text(audio_input)
     print(text)
 
